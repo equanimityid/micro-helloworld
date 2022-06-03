@@ -5,18 +5,20 @@ This is the Helloworld service
 Generated with
 
 ```
-micro new --namespace=go.micro --type=service github.com/ebelanja/micro-examples/helloworld
+micro new --namespace=go.micro --type=service github.com/equanimityid/micro-helloworld
 ```
 
 ## Getting Started
 
-- [Configuration](#configuration)
-- [Dependencies](#dependencies)
-- [Usage](#usage)
+- [Helloworld Service](#helloworld-service)
+  - [Getting Started](#getting-started)
+  - [Configuration](#configuration)
+  - [Dependencies](#dependencies)
+  - [Usage](#usage)
 
 ## Configuration
 
-- FQDN: go.micro.service.helloworld
+- FQDN: go.micro.svc.helloworld
 - Type: service
 - Alias: helloworld
 
@@ -46,7 +48,7 @@ make build
 
 Run the service
 ```
-./helloworld-service
+./helloworld_service
 ```
 
 Build a docker image

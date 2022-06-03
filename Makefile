@@ -1,17 +1,15 @@
 
 GOPATH:=$(shell go env GOPATH)
-MODIFY=Mproto/imports/api.proto=github.com/ebelanja/go-micro/api/proto
+MODIFY=Mproto/imports/api.proto=github.com/micro/go-micro/api/proto
 
 .PHONY: proto
 proto:
-    
 	protoc --proto_path=. --micro_out=${MODIFY}:. --go_out=${MODIFY}:. proto/helloworld/helloworld.proto
     
-
 .PHONY: build
 build: proto
 
-	go build -o helloworld-service *.go
+	go build -o helloworld_service *.go
 
 .PHONY: test
 test:
@@ -19,4 +17,4 @@ test:
 
 .PHONY: docker
 docker:
-	docker build . -t helloworld-service:latest
+	docker build . -t helloworld_service:latest
